@@ -3,6 +3,14 @@
 <nav id="sidebar-wrapper">
 	<ul class="sidebar-nav">
 		<a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+		<% if user_signed_in? %>
+      <li/><font color="white"><%= current_user.email %></font>
+      <a href="/users/sign_out">(로그아웃)</a>
+    <% end %>
+    
+    <% unless user_signed_in? %>
+      <li/><a href="/users/sign_in">로그인</a>
+    <% end %>
 		<li>
 			<a href="#top" onclick=$("#menu-close").click();>Home</a>
 		</li>
