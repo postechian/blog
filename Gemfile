@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# AWS
+gem 'fog-aws'
+# 업로드
+gem 'carrierwave'
+# 로그인
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

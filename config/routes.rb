@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
+  post 'bulletin/upload'
+  
+  get 'bulletin/list'
+
+  get 'bulletin/write'
+
+  get 'bulletin/edit'
+
+  get 'bulletin/delete'
+
+  get 'bulletin/reply'
+
   devise_for :users
+  
   root 'home#main'
   
   get 'home/main'
